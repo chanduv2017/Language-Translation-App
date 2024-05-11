@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translation App</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="header">
+        <button onclick="logout()" class="logout-button">Logout</button>
+    </div>
+
+    <div class="container">
+        <h1>Language Translation App</h1>
+
+        <select id="inputLanguage">
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Romanian">Romanian</option>
+        </select>
+
+        <select id="outputLanguage">
+            <option value="English">English</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Romanian">Romanian</option>
+        </select>
+        <div class="recorder">
+          <button id="recordButton">Record</button>
+          <button id="stopButton" disabled>Stop</button>
+          <button id="playButton" disabled>Play</button>
+          <button id="sendButton" disabled>Send</button>
+        </div>
+        <textarea id="inputText" rows="5" placeholder="Enter text to translate..."></textarea>
+        <button onclick="translateText()">Translate</button>
+        <button onclick="checkHistory()" id="historyButton">Check History</button>
+        
+        <div id="outputText" class="output-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
